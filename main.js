@@ -523,3 +523,10 @@ function logger() {
 }
 logger();
 logger();
+function juiceProcessor(apples, oranges) {
+  const juice = `juice with ${apples} apples and ${oranges}`;
+  console.log(apples, oranges);
+  return juice;
+}
+const appleJuice = juiceProcessor(5, 9);
+console.log(appleJuice);
