@@ -514,7 +514,12 @@ console.log(
 // const age = 23;
 // const drink = age >= 18 ? "wine" : "water";
 // console.log(drink);
-const bmi = (mass, height) => {
-  return mass / height ** 2;
-};
-console.log(bmi(78, 1.9));
+// const bmi = (mass, height) => {
+//   return mass / height ** 2;
+// };
+// console.log(bmi(78, 1.9));
+function logger() {
+  console.log(`My name is Glory.`);
+}
+logger();
+logger();
