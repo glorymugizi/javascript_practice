@@ -530,3 +530,5 @@ function juiceProcessor(apples, oranges) {
 }
 const appleJuice = juiceProcessor(5, 9);
 console.log(appleJuice);
+const calAge = (birthyear) => 2022 - birthyear;
+console.log(`${calAge(1984)} years`);
