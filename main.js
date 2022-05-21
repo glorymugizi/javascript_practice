@@ -627,6 +627,17 @@ const percentageOfWorld1 = function (population) {
   let worldpopln = 7900;
   return (population / worldpopln) * 100;
 };
-console.log(percentageOfWorld1(40));
-console.log(percentageOfWorld1(1441));
-console.log(percentageOfWorld1(70));
+const ugandaPopln = 40;
+const chinaPopln = 1441;
+const usaPopln = 500;
+
+console.log(percentageOfWorld1(ugandaPopln));
+console.log(percentageOfWorld1(chinaPopln));
+console.log(percentageOfWorld1(usaPopln));
+// ARROW FUNCTION
+
+const percentageOfWorld3 = (population) => (population / 7900) * 100;
+
+console.log(percentageOfWorld3(ugandaPopln));
+console.log(percentageOfWorld3(chinaPopln));
+console.log(percentageOfWorld3(usaPopln));
