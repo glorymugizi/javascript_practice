@@ -663,22 +663,16 @@ const studentBioData = function (studentFname, studentLname, stream) {
 studentBioData("Agaba", "Nelson", "P5");
 
 const averageScore = function (
-  subjectOne,
-  subjectTwo,
-  subjectThree,
-  subjectFour,
-  subjectFive
+  english,
+  science,
+  mathmatics,
+  socialStudies,
+  religiousEduc
 ) {
-  const english = subjectOne;
-  const science = subjectTwo;
-  const mathmatics = subjectThree;
-  const socialStudies = subjectFour;
-  const religiousEduc = subjectFive;
-  const total =
-    subjectOne + subjectTwo + subjectThree + subjectFour + subjectFive;
+  const total = english + science + mathmatics + socialStudies + religiousEduc;
   const average = total / 5;
-
   console.log(`And average Score is ${average}`);
 };
 averageScore(45, 60, 90, 95, 100);
 averageScore(78, 98, 57, 62, 88);
+averageScore(67, 50, 57, 62, 78);
