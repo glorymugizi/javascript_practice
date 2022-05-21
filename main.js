@@ -578,6 +578,7 @@ if (numNeighbours === 1) {
   console.log(`no borders`);
 }*/
 
+// LOGICAL OPERATORS
 if (languange === "english" && population < 50000000 && !isIsland) {
   console.log(`You should live in ${country}`);
 } else {
