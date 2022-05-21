@@ -532,3 +532,47 @@ const appleJuice = juiceProcessor(5, 9);
 console.log(appleJuice);
 const calAge = (birthyear) => 2022 - birthyear;
 console.log(`${calAge(1984)} years`);
+const continent = "Africa";
+const isIsland = false;
+let population = 20000000;
+const country = "uganda";
+let languange = "English";
+console.log(
+  typeof isIsland,
+  typeof population,
+  typeof country,
+  typeof languange
+);
+console.log(population / 2);
+population++;
+console.log(population);
+console.log(population > 6000000);
+console.log(population < 33000000);
+// const description =
+//   country +
+//   "is in " +
+//   continent +
+//   ", and its" +
+//   population +
+//   "people speak " +
+//   languange;
+const description = `${country} is in ${continent} and its ${population} people speak ${languange}`;
+console.log(description);
+
+if (population > 33000000) {
+  console.log(`Uganda's population is above average`);
+} else {
+  console.log(
+    `Uganda's population is ${22000000 - population} million below average`
+  );
+}
+const numNeighbours = Number(
+  prompt(`How many neighbour countries does your country have`)
+);
+if (numNeighbours === 1) {
+  console.log(`only ${numNeighbours} border!`);
+} else if (numNeighbours > 1) {
+  console.log(`More than 1 border`);
+} else {
+  console.log(`no borders`);
+}
