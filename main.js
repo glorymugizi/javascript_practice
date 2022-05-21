@@ -495,11 +495,11 @@ tellFortune("Doctor", "America", "Scovia", 2);*/
 //   console.log(`someone else should drive`);
 // }
 
-const bill = 275;
-const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
-console.log(
-  `" The  bill was ${bill}, tip was ${tip} and total value ${bill + tip}" `
-);
+// const bill = 275;
+// const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+// console.log(
+//   `" The  bill was ${bill}, tip was ${tip} and total value ${bill + tip}" `
+// );
 
 // const day = prompt("what is the day of the week");
 // switch (day) {
@@ -518,37 +518,37 @@ console.log(
 //   return mass / height ** 2;
 // };
 // console.log(bmi(78, 1.9));
-function logger() {
-  console.log(`My name is Glory.`);
-}
-logger();
-logger();
-function juiceProcessor(apples, oranges) {
-  const juice = `juice with ${apples} apples and ${oranges}`;
-  console.log(apples, oranges);
-  return juice;
-}
-const appleJuice = juiceProcessor(5, 9);
-console.log(appleJuice);
-const calAge = (birthyear) => 2022 - birthyear;
-console.log(`${calAge(1984)} years`);
-const continent = "Africa";
-const isIsland = false;
-let population = 20000000;
-const country = "uganda";
-let languange = "english";
-console.log(
-  typeof isIsland,
-  typeof population,
-  typeof country,
-  typeof languange
-);
-console.log(population / 2);
-population++;
-console.log(population);
-console.log(population > 6000000);
-console.log(population < 33000000);
-// const description =
+// function logger() {
+//   console.log(`My name is Glory.`);
+// }
+// logger();
+// logger();
+// function juiceProcessor(apples, oranges) {
+//   const juice = `juice with ${apples} apples and ${oranges}`;
+//   console.log(apples, oranges);
+//   return juice;
+// }
+// const appleJuice = juiceProcessor(5, 9);
+// console.log(appleJuice);
+// const calAge = (birthyear) => 2022 - birthyear;
+// console.log(`${calAge(1984)} years`);
+// const continent = "Africa";
+// const isIsland = false;
+// let population = 20000000;
+// const country = "uganda";
+// let languange = "english";
+// console.log(
+//   typeof isIsland,
+//   typeof population,
+//   typeof country,
+//   typeof languange
+// );
+// console.log(population / 2);
+// population++;
+// console.log(population);
+// console.log(population > 6000000);
+// console.log(population < 33000000);
+// // const description =
 //   country +
 //   "is in " +
 //   continent +
@@ -579,11 +579,11 @@ if (numNeighbours === 1) {
 }*/
 
 // LOGICAL OPERATORS
-if (languange === "english" && population < 50000000 && !isIsland) {
-  console.log(`You should live in ${country}`);
-} else {
-  console.log(`${country} doesn't meet your criteria`);
-}
+// if (languange === "english" && population < 50000000 && !isIsland) {
+//   console.log(`You should live in ${country}`);
+// } else {
+//   console.log(`${country} doesn't meet your criteria`);
+// }
 //the switch statement
 // switch (languange) {
 //   case "chinese":
@@ -606,8 +606,27 @@ if (languange === "english" && population < 50000000 && !isIsland) {
 //     console.log(`Great language too`);
 // }
 // THE TERNARY OPERATOR
-console.log(
-  population > 33000000
-    ? `Uganda's population is above average`
-    : `Uganda's population is below average`
-);
+// console.log(
+//   population > 33000000
+//     ? `Uganda's population is above average`
+//     : `Uganda's population is below average`
+// );
+// FUNCTIONS
+
+function describeCountry(country, population, capitalCity) {
+  return `${country} has ${population} million people and its capital city is ${capitalCity}`;
+}
+console.log(describeCountry("Uganda", 40, "Kampala!"));
+console.log(describeCountry("Kenya", 54, "Nairobi!"));
+console.log(describeCountry("Rwanda", 20, "Kigali!"));
+console.log(describeCountry("TZ", 70, "Dodoma!"));
+
+//FUNCTION DECLARATION
+
+const percentageOfWorld1 = function (population) {
+  let worldpopln = 7900;
+  return (population / worldpopln) * 100;
+};
+console.log(percentageOfWorld1(40));
+console.log(percentageOfWorld1(1441));
+console.log(percentageOfWorld1(70));
