@@ -584,23 +584,30 @@ if (languange === "english" && population < 50000000 && !isIsland) {
 } else {
   console.log(`${country} doesn't meet your criteria`);
 }
-switch (prompt(languange)) {
-  case "chinese":
-  case "mandarin":
-    console.log(`Most number of native speakers!`);
-    break;
-  case "spanish":
-    console.log(`2nd place in number of native speakers!`);
-    break;
-  case "english":
-    console.log(`3rd place`);
-    break;
-  case "hindi":
-    console.log(`4th place`);
-    break;
-  case "arabic":
-    console.log(`4th place`);
-    break;
-  default:
-    console.log(`Great language too`);
-}
+//the switch statement
+// switch (languange) {
+//   case "chinese":
+//   case "mandarin":
+//     console.log(`Most number of native speakers!`);
+//     break;
+//   case "spanish":
+//     console.log(`2nd place in number of native speakers!`);
+//     break;
+//   case "english":
+//     console.log(`3rd place`);
+//     break;
+//   case "hindi":
+//     console.log(`4th place`);
+//     break;
+//   case "arabic":
+//     console.log(`4th place`);
+//     break;
+//   default:
+//     console.log(`Great language too`);
+// }
+// THE TERNARY OPERATOR
+console.log(
+  population > 33000000
+    ? `Uganda's population is above average`
+    : `Uganda's population is below average`
+);
