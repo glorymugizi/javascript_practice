@@ -613,42 +613,72 @@ if (numNeighbours === 1) {
 // );
 // FUNCTIONS
 
-function describeCountry(country, population, capitalCity) {
-  return `${country} has ${population} million people and its capital city is ${capitalCity}`;
-}
-console.log(describeCountry("Uganda", 40, "Kampala!"));
-console.log(describeCountry("Kenya", 54, "Nairobi!"));
-console.log(describeCountry("Rwanda", 20, "Kigali!"));
-console.log(describeCountry("TZ", 70, "Dodoma!"));
+// function describeCountry(country, population, capitalCity) {
+//   return `${country} has ${population} million people and its capital city is ${capitalCity}`;
+// }
+// console.log(describeCountry("Uganda", 40, "Kampala!"));
+// console.log(describeCountry("Kenya", 54, "Nairobi!"));
+// console.log(describeCountry("Rwanda", 20, "Kigali!"));
+// console.log(describeCountry("TZ", 70, "Dodoma!"));
 
 //FUNCTION DECLARATION
 
-const percentageOfWorld1 = function (population) {
-  let worldpopln = 7900;
-  return (population / worldpopln) * 100;
-};
-const ugandaPopln = 40;
-const chinaPopln = 1441;
-const usaPopln = 500;
+// const percentageOfWorld1 = function (population) {
+//   let worldpopln = 7900;
+//   return (population / worldpopln) * 100;
+// };
+// const ugandaPopln = 40;
+// const chinaPopln = 1441;
+// const usaPopln = 500;
 
-console.log(percentageOfWorld1(ugandaPopln));
-console.log(percentageOfWorld1(chinaPopln));
-console.log(percentageOfWorld1(usaPopln));
+// console.log(percentageOfWorld1(ugandaPopln));
+// console.log(percentageOfWorld1(chinaPopln));
+// console.log(percentageOfWorld1(usaPopln));
+
 // ARROW FUNCTION
 
-const percentageOfWorld3 = (population) => (population / 7900) * 100;
+// const percentageOfWorld3 = (population) => (population / 7900) * 100;
 
-console.log(percentageOfWorld3(ugandaPopln));
-console.log(percentageOfWorld3(chinaPopln));
-console.log(percentageOfWorld3(usaPopln));
+// console.log(percentageOfWorld3(ugandaPopln));
+// console.log(percentageOfWorld3(chinaPopln));
+// console.log(percentageOfWorld3(usaPopln));
 
-// FUNCTION CALLING OTHER FUNCTIONS
+// // FUNCTION CALLING OTHER FUNCTIONS
 
-const describePopulation = function (country, population) {
-  const percentage = percentageOfWorld1(population);
-  const description = `${country} has  ${population} million people which is about ${percentage} % of the world`;
-  console.log(description);
+// const describePopulation = function (country, population) {
+//   const percentage = percentageOfWorld1(population);
+//   const description = `${country} has  ${population} million people which is about ${percentage} % of the world`;
+//   console.log(description);
+// };
+// describePopulation("China", 1441);
+// describePopulation("Uganda", 40);
+// describePopulation("Uk", 86);
+
+// MORE PRACTICE
+
+const studentBioData = function (studentFname, studentLname, stream) {
+  const studentDescription = ` ${studentFname} ${studentLname} in ${stream} class`;
+  console.log(studentDescription);
 };
-describePopulation("China", 1441);
-describePopulation("Uganda", 40);
-describePopulation("Uk", 86);
+studentBioData("Agaba", "Nelson", "P5");
+
+const averageScore = function (
+  subjectOne,
+  subjectTwo,
+  subjectThree,
+  subjectFour,
+  subjectFive
+) {
+  const english = subjectOne;
+  const science = subjectTwo;
+  const mathmatics = subjectThree;
+  const socialStudies = subjectFour;
+  const religiousEduc = subjectFive;
+  const total =
+    subjectOne + subjectTwo + subjectThree + subjectFour + subjectFive;
+  const average = total / 5;
+
+  console.log(`And average Score is ${average}`);
+};
+averageScore(45, 60, 90, 95, 100);
+averageScore(78, 98, 57, 62, 88);
