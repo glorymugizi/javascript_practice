@@ -536,7 +536,7 @@ const continent = "Africa";
 const isIsland = false;
 let population = 20000000;
 const country = "uganda";
-let languange = "English";
+let languange = "english";
 console.log(
   typeof isIsland,
   typeof population,
@@ -556,17 +556,18 @@ console.log(population < 33000000);
 //   population +
 //   "people speak " +
 //   languange;
-const description = `${country} is in ${continent} and its ${population} people speak ${languange}`;
-console.log(description);
+// const description = `${country} is in ${continent} and its ${population} people speak ${languange}`;
+// console.log(description);
 
-if (population > 33000000) {
-  console.log(`Uganda's population is above average`);
-} else {
-  console.log(
-    `Uganda's population is ${22000000 - population} million below average`
-  );
-}
-const numNeighbours = Number(
+// if (population > 33000000) {
+//   console.log(`Uganda's population is above average`);
+// } else {
+//   console.log(
+//     `Uganda's population is ${22000000 - population} million below average`
+//   );
+// }
+// Equality operators == vs ===
+/*const numNeighbours = Number(
   prompt(`How many neighbour countries does your country have`)
 );
 if (numNeighbours === 1) {
@@ -575,4 +576,10 @@ if (numNeighbours === 1) {
   console.log(`More than 1 border`);
 } else {
   console.log(`no borders`);
+}*/
+
+if (languange === "english" && population < 50000000 && !isIsland) {
+  console.log(`You should live in ${country}`);
+} else {
+  console.log(`${country} doesn't meet your criteria`);
 }
