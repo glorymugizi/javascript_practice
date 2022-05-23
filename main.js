@@ -720,10 +720,6 @@ const years = [1999, 2002, 1984, 1954, 1976];
 const calcAge = function (birthYear) {
   return 2022 - birthYear;
 };
-console.log(years[0]);
-console.log(years[3]);
-console.log(years[2]);
-console.log(years[1]);
 
 const age1 = calcAge(years[0]);
 const age2 = calcAge(years[3]);
@@ -740,3 +736,16 @@ const ages = [
   calcAge(years[years.length - 1]),
 ];
 console.log(ages);
+const newLength = friends.push("Sam", "Mark");
+console.log(friends);
+console.log(newLength);
+friends.shift();
+console.log(friends);
+const check = friends.includes("glory");
+console.log(check);
+
+if (friends.includes("glory")) {
+  console.log(`Glory is Your Friend`);
+} else {
+  console.log(`Glory is not among your friends `);
+}
