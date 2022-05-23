@@ -676,3 +676,32 @@ const averageScore = function (
 averageScore(45, 60, 90, 95, 100);
 averageScore(78, 98, 57, 62, 88);
 averageScore(67, 50, 57, 62, 78);
+
+const calAverage = (scoreOne, scoreTwo, scoreThree) =>
+  (scoreOne + scoreTwo + scoreThree) / 3;
+
+const avgDolphins = calAverage(44, 23, 71);
+const avgKoalas = calAverage(65, 54, 49);
+console.log(avgDolphins, avgKoalas);
+
+const checkWinner = function (avgDolphins, avgKoalas) {
+  if (avgDolphins >= 2 * avgKoalas) {
+    console.log(`Dolphins win the trophy🏆 with ${avgDolphins} points`);
+  } else if (avgKoalas >= 2 * avgDolphins) {
+    console.log(`Koalas win the trophy 🏆with ${avgKoalas} points`);
+  } else {
+    console.log(`No team wins`);
+  }
+};
+console.log(checkWinner(avgDolphins, avgKoalas));
+console.log(avgKoalas);
+console.log(avgDolphins);
+
+// ......ARRAYS
+//......Array creation
+const friends = ["Brian", "Nelson", "Henry", "Obed", "Kamanzi"];
+console.log(friends);
+
+// another way of creating arrays
+const bestFriends = new Array("Nelson", "Phiona", "Scovia", "Jacke", "Ireen");
+console.log(bestFriends);
