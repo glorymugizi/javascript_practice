@@ -705,3 +705,38 @@ console.log(friends);
 // another way of creating arrays
 const bestFriends = new Array("Nelson", "Phiona", "Scovia", "Jacke", "Ireen");
 console.log(bestFriends);
+// selecting Elements in an array
+console.log(friends[0]); // selects element at position 1 ie Brian
+console.log(friends[4]); // selects element at position 5 ie Kamanzi
+
+// array length
+console.log(friends.length); //prints or logs on the console total number of elements in an array. ie the friends array has 5.
+
+friends[2] = "Dancun"; // this replace HENRY  with Dancun
+console.log(friends[2]);
+
+const years = [1999, 2002, 1984, 1954, 1976];
+
+const calcAge = function (birthYear) {
+  return 2022 - birthYear;
+};
+console.log(years[0]);
+console.log(years[3]);
+console.log(years[2]);
+console.log(years[1]);
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[3]);
+const age3 = calcAge(years[2]);
+const age4 = calcAge(years[1]);
+const age5 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3, age4, age5);
+
+const ages = [
+  calcAge(years[0]),
+  calcAge(years[3]),
+  calcAge(years[2]),
+  calcAge(years[1]),
+  calcAge(years[years.length - 1]),
+];
+console.log(ages);
