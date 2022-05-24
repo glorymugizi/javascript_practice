@@ -797,3 +797,21 @@ glory.telephoneNo = "0756889900";
 glory["friends"] = ["Henry", "Nelly", "Brian"];
 
 console.log(glory.friends[1]);
+console.log(
+  `${glory.firstName} has ${glory.friends.length} , and his best friend is called ${glory.friends[0]}`
+);
+// added more properties to object glory including the functions (calcAge and getSummary)
+glory.hasDriversLicense = true;
+glory.birthYeay = 1984;
+glory.job = "Teacher";
+glory.CalcAge = function () {
+  this.age = 2022 - this.birthYeay;
+  return this.age;
+};
+glory.getSummary = function () {
+  return `${glory.firstName} is a ${glory.CalcAge()} old ${glory.job} and has ${
+    glory.hasDriversLicense ? "a" : " no"
+  } drivers license`;
+};
+
+console.log(glory.getSummary());
