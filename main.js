@@ -656,96 +656,144 @@ if (numNeighbours === 1) {
 
 // MORE PRACTICE
 
-const studentBioData = function (studentFname, studentLname, stream) {
-  const studentDescription = ` ${studentFname} ${studentLname} in ${stream} class`;
-  console.log(studentDescription);
+// const studentBioData = function (studentFname, studentLname, stream) {
+//   const studentDescription = ` ${studentFname} ${studentLname} in ${stream} class`;
+//   console.log(studentDescription);
+// };
+// studentBioData("Agaba", "Nelson", "P5");
+
+// const averageScore = function (
+//   english,
+//   science,
+//   mathmatics,
+//   socialStudies,
+//   religiousEduc
+// ) {
+//   const total = english + science + mathmatics + socialStudies + religiousEduc;
+//   const average = total / 5;
+//   console.log(`And average Score is ${average}`);
+// };
+// averageScore(45, 60, 90, 95, 100);
+// averageScore(78, 98, 57, 62, 88);
+// averageScore(67, 50, 57, 62, 78);
+
+// const calAverage = (scoreOne, scoreTwo, scoreThree) =>
+//   (scoreOne + scoreTwo + scoreThree) / 3;
+
+// const avgDolphins = calAverage(44, 23, 71);
+// const avgKoalas = calAverage(65, 54, 49);
+// console.log(avgDolphins, avgKoalas);
+
+// const checkWinner = function (avgDolphins, avgKoalas) {
+//   if (avgDolphins >= 2 * avgKoalas) {
+//     console.log(`Dolphins win the trophy🏆 with ${avgDolphins} points`);
+//   } else if (avgKoalas >= 2 * avgDolphins) {
+//     console.log(`Koalas win the trophy 🏆with ${avgKoalas} points`);
+//   } else {
+//     console.log(`No team wins`);
+//   }
+// };
+// console.log(checkWinner(avgDolphins, avgKoalas));
+// console.log(avgKoalas);
+// console.log(avgDolphins);
+
+// // ......ARRAYS
+// //......Array creation
+// const friends = ["Brian", "Nelson", "Henry", "Obed", "Kamanzi"];
+// console.log(friends);
+
+// // another way of creating arrays
+// const bestFriends = new Array("Nelson", "Phiona", "Scovia", "Jacke", "Ireen");
+// console.log(bestFriends);
+// // selecting Elements in an array
+// console.log(friends[0]); // selects element at position 1 ie Brian
+// console.log(friends[4]); // selects element at position 5 ie Kamanzi
+
+// // array length
+// console.log(friends.length); //prints or logs on the console total number of elements in an array. ie the friends array has 5.
+
+// friends[2] = "Dancun"; // this replace HENRY  with Dancun
+// console.log(friends[2]);
+
+// const years = [1999, 2002, 1984, 1954, 1976];
+
+// const calcAge = function (birthYear) {
+//   return 2022 - birthYear;
+// };
+
+// const age1 = calcAge(years[0]);
+// const age2 = calcAge(years[3]);
+// const age3 = calcAge(years[2]);
+// const age4 = calcAge(years[1]);
+// const age5 = calcAge(years[years.length - 1]);
+// console.log(age1, age2, age3, age4, age5);
+
+// const ages = [
+//   calcAge(years[0]),
+//   calcAge(years[3]),
+//   calcAge(years[2]),
+//   calcAge(years[1]),
+//   calcAge(years[years.length - 1]),
+// ];
+// console.log(ages);
+// const newLength = friends.push("Sam", "Mark");
+// console.log(friends);
+// console.log(newLength);
+// friends.shift();
+// console.log(friends);
+// const check = friends.includes("glory");
+// console.log(check);
+
+// if (friends.includes("glory")) {
+//   console.log(`Glory is Your Friend`);
+// } else {
+//   console.log(`Glory is not among your friends `);
+// }
+
+const calcTip = function (bill) {
+  if (bill >= 50 && bill <= 300) {
+    return bill * 0.15;
+  } else return bill * 0.2;
 };
-studentBioData("Agaba", "Nelson", "P5");
 
-const averageScore = function (
-  english,
-  science,
-  mathmatics,
-  socialStudies,
-  religiousEduc
-) {
-  const total = english + science + mathmatics + socialStudies + religiousEduc;
-  const average = total / 5;
-  console.log(`And average Score is ${average}`);
-};
-averageScore(45, 60, 90, 95, 100);
-averageScore(78, 98, 57, 62, 88);
-averageScore(67, 50, 57, 62, 78);
+// const tip = calcTip(100);
+// console.log(tip);
+const bills = [125, 555, 44];
+const bills1 = calcTip(bills[0]);
+const bills2 = calcTip(bills[1]);
+const bills3 = calcTip(bills[2]);
 
-const calAverage = (scoreOne, scoreTwo, scoreThree) =>
-  (scoreOne + scoreTwo + scoreThree) / 3;
+console.log(bills1, bills2, bills3);
 
-const avgDolphins = calAverage(44, 23, 71);
-const avgKoalas = calAverage(65, 54, 49);
-console.log(avgDolphins, avgKoalas);
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(tips, bills);
 
-const checkWinner = function (avgDolphins, avgKoalas) {
-  if (avgDolphins >= 2 * avgKoalas) {
-    console.log(`Dolphins win the trophy🏆 with ${avgDolphins} points`);
-  } else if (avgKoalas >= 2 * avgDolphins) {
-    console.log(`Koalas win the trophy 🏆with ${avgKoalas} points`);
-  } else {
-    console.log(`No team wins`);
-  }
-};
-console.log(checkWinner(avgDolphins, avgKoalas));
-console.log(avgKoalas);
-console.log(avgDolphins);
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
-// ......ARRAYS
-//......Array creation
-const friends = ["Brian", "Nelson", "Henry", "Obed", "Kamanzi"];
-console.log(friends);
+console.log(total);
+console.log(Math.max(total[0], total[1]));
+console.log(total.length);
+console.log(total);
 
-// another way of creating arrays
-const bestFriends = new Array("Nelson", "Phiona", "Scovia", "Jacke", "Ireen");
-console.log(bestFriends);
-// selecting Elements in an array
-console.log(friends[0]); // selects element at position 1 ie Brian
-console.log(friends[4]); // selects element at position 5 ie Kamanzi
+// OBJECTS
 
-// array length
-console.log(friends.length); //prints or logs on the console total number of elements in an array. ie the friends array has 5.
-
-friends[2] = "Dancun"; // this replace HENRY  with Dancun
-console.log(friends[2]);
-
-const years = [1999, 2002, 1984, 1954, 1976];
-
-const calcAge = function (birthYear) {
-  return 2022 - birthYear;
+const glory = {
+  firstName: "Glory",
+  lastName: "Mugizi",
+  residence: "Mukono",
 };
 
-const age1 = calcAge(years[0]);
-const age2 = calcAge(years[3]);
-const age3 = calcAge(years[2]);
-const age4 = calcAge(years[1]);
-const age5 = calcAge(years[years.length - 1]);
-console.log(age1, age2, age3, age4, age5);
+console.log(glory);
 
-const ages = [
-  calcAge(years[0]),
-  calcAge(years[3]),
-  calcAge(years[2]),
-  calcAge(years[1]),
-  calcAge(years[years.length - 1]),
-];
-console.log(ages);
-const newLength = friends.push("Sam", "Mark");
-console.log(friends);
-console.log(newLength);
-friends.shift();
-console.log(friends);
-const check = friends.includes("glory");
-console.log(check);
+// Dot and bracket notation
+// to select a certain property in the object we use the dot or bracket notation.
+console.log(glory.firstName);
+// this logs the first name to the console.
+console.log(glory["residence"]);
 
-if (friends.includes("glory")) {
-  console.log(`Glory is Your Friend`);
-} else {
-  console.log(`Glory is not among your friends `);
-}
+//adding properties to the object using dot
+glory.telephoneNo = "0756889900";
+//adding properties to the object using bracket
+glory["friends"] = ["Henry", "Nelly", "Brian"];
+
+console.log(glory.friends[1]);
