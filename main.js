@@ -835,18 +835,19 @@ johnInfo.CalcBmi = function () {
   this.bmi = this.mass / this.height ** 2;
   return this.bmi;
 };
-console.log(
-  markInfo.CalcBmi() > johnInfo.CalcBmi()
-    ? `${markInfo.fullName}'s BMI (${markInfo.bmi} is higher than ${
-        johnInfo.fullName
-      }'s ${johnInfo.CalcBmi()}!)`
-    : `${johnInfo.fullName}'s BMI (${johnInfo.CalcBmi()} is higher than ${
-        markInfo.fullName
-      }'s ${markInfo.CalcBmi()}!)`
-);
-
 console.log(markInfo.CalcBmi());
 console.log(johnInfo.CalcBmi());
+
+if (markInfo.bmi > johnInfo.bmi) {
+  console.log(
+    `${markInfo.fullName}'s BMI ${markInfo.bmi} is higher than ${johnInfo.fullName}'s ${johnInfo.bmi}!`
+  );
+} else if (johnInfo.bmi > markInfo.bmi) {
+  console.log(
+    `${johnInfo.fullName}'s BMI ${johnInfo.bmi} is higher than ${markInfo.fullName}'s ${markInfo.bmi}!`
+  );
+}
+
 // more array practice
 const populations = [40, 57, 350, 60];
 console.log(populations.length === 4);
