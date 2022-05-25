@@ -853,3 +853,37 @@ const percentages = [
 ];
 
 console.log(percentages);
+
+const neighbours = ["Kenya", "Tanzania", "Rwanda", "South sudan"];
+neighbours.push("Utopia"); // adds Utopia to the array
+console.log(neighbours);
+neighbours.pop("Utopia");
+console.log(neighbours);
+if (!neighbours.includes("Germany")) {
+  console.log(`Probably not a central European country`);
+}
+neighbours[neighbours.indexOf("Tanzania")] = "Repbulic of Tanzania";
+console.log(neighbours);
+
+const myCountry = {
+  country: "Uganda",
+  capital: "Kampala",
+  language: "English",
+  population: 40,
+  neighbours: ["kenya", "Rwanda", "Tanzania", "DR congo"],
+};
+console.log(myCountry);
+console.log(
+  `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people,${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`
+);
+myCountry.population += 2;
+console.log(myCountry.population);
+myCountry.describe = function () {
+  return `${this.country} has ${this.population} million ${this.language}-speaking people,${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`;
+};
+// more and more practice
+console.log(myCountry.describe());
+myCountry.CheckIsland = function () {
+  return this.neighbours.length === 0 ? true : false;
+};
+console.log(myCountry.CheckIsland());
