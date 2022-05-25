@@ -897,3 +897,18 @@ myCountry.CheckIsland = function () {
   return this.neighbours.length === 0 ? true : false;
 };
 console.log(myCountry.CheckIsland());
+
+for (let i = "glory"; i.length < 20; i += "glory") {
+  console.log(i);
+}
+
+// looping through Arrays
+
+const friends = ["Brian", "Nelson", "Henry", "Obed", "Kamanzi"];
+const bestFriendsLetters = [];
+for (let i = 0; i < friends.length; i++) {
+  console.log(`${friends[i]} is one of Glory's friends`); //reading/displaying elements of an array
+  bestFriendsLetters.push(friends[i][0]); //adding elements to an empty array with a for loop.
+}
+
+console.log(bestFriendsLetters);
