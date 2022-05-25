@@ -815,3 +815,41 @@ glory.getSummary = function () {
 };
 
 console.log(glory.getSummary());
+
+//coding challenge
+const markInfo = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+};
+const johnInfo = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+};
+markInfo.CalcBMI = function () {
+  this.BMI = this.mass / this.height ** 2;
+  return this.BMI;
+};
+johnInfo.CalcBMI = function () {
+  this.BMI = this.mass / this.height ** 2;
+  return this.BMI;
+};
+
+console.log(markInfo.CalcBMI());
+console.log(johnInfo.CalcBMI());
+// more array practice
+const populations = [40, 57, 350, 60];
+console.log(populations.length === 4);
+const percentageOfWorld1 = function (population) {
+  let worldpopln = 7900;
+  return (population / worldpopln) * 100;
+};
+const percentages = [
+  percentageOfWorld1(populations[0]),
+  percentageOfWorld1(populations[1]),
+  percentageOfWorld1(populations[2]),
+  percentageOfWorld1(populations[3]),
+];
+
+console.log(percentages);
