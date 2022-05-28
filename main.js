@@ -750,165 +750,210 @@ if (numNeighbours === 1) {
 //   console.log(`Glory is not among your friends `);
 // }
 
-const calcTip = function (bill) {
-  if (bill >= 50 && bill <= 300) {
-    return bill * 0.15;
-  } else return bill * 0.2;
-};
+// const calcTip = function (bill) {
+//   if (bill >= 50 && bill <= 300) {
+//     return bill * 0.15;
+//   } else return bill * 0.2;
+// };
 
-// const tip = calcTip(100);
-// console.log(tip);
-const bills = [125, 555, 44];
-const bills1 = calcTip(bills[0]);
-const bills2 = calcTip(bills[1]);
-const bills3 = calcTip(bills[2]);
+// // const tip = calcTip(100);
+// // console.log(tip);
+// const bills = [125, 555, 44];
+// const bills1 = calcTip(bills[0]);
+// const bills2 = calcTip(bills[1]);
+// const bills3 = calcTip(bills[2]);
 
-console.log(bills1, bills2, bills3);
+// console.log(bills1, bills2, bills3);
 
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-console.log(tips, bills);
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// console.log(tips, bills);
 
-const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+// const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
-console.log(total);
-console.log(Math.max(total[0], total[1]));
-console.log(total.length);
-console.log(total);
+// console.log(total);
+// console.log(Math.max(total[0], total[1]));
+// console.log(total.length);
+// console.log(total);
 
-// OBJECTS
+// // OBJECTS
 
-const glory = {
-  firstName: "Glory",
-  lastName: "Mugizi",
-  residence: "Mukono",
-};
+// const glory = {
+//   firstName: "Glory",
+//   lastName: "Mugizi",
+//   residence: "Mukono",
+// };
 
-console.log(glory);
+// console.log(glory);
 
-// Dot and bracket notation
-// to select a certain property in the object we use the dot or bracket notation.
-console.log(glory.firstName);
-// this logs the first name to the console.
-console.log(glory["residence"]);
+// // Dot and bracket notation
+// // to select a certain property in the object we use the dot or bracket notation.
+// console.log(glory.firstName);
+// // this logs the first name to the console.
+// console.log(glory["residence"]);
 
-//adding properties to the object using dot
-glory.telephoneNo = "0756889900";
-//adding properties to the object using bracket
-glory["friends"] = ["Henry", "Nelly", "Brian"];
+// //adding properties to the object using dot
+// glory.telephoneNo = "0756889900";
+// //adding properties to the object using bracket
+// glory["friends"] = ["Henry", "Nelly", "Brian"];
 
-console.log(glory.friends[1]);
-console.log(
-  `${glory.firstName} has ${glory.friends.length} , and his best friend is called ${glory.friends[0]}`
-);
-// added more properties to object glory including the functions (calcAge and getSummary)
-glory.hasDriversLicense = true;
-glory.birthYeay = 1984;
-glory.job = "Teacher";
-glory.CalcAge = function () {
-  this.age = 2022 - this.birthYeay;
-  return this.age;
-};
-glory.getSummary = function () {
-  return `${glory.firstName} is a ${glory.CalcAge()} old ${glory.job} and has ${
-    glory.hasDriversLicense ? "a" : " no"
-  } drivers license`;
-};
+// console.log(glory.friends[1]);
+// console.log(
+//   `${glory.firstName} has ${glory.friends.length} , and his best friend is called ${glory.friends[0]}`
+// );
+// // added more properties to object glory including the functions (calcAge and getSummary)
+// glory.hasDriversLicense = true;
+// glory.birthYeay = 1984;
+// glory.job = "Teacher";
+// glory.CalcAge = function () {
+//   this.age = 2022 - this.birthYeay;
+//   return this.age;
+// };
+// glory.getSummary = function () {
+//   return `${glory.firstName} is a ${glory.CalcAge()} old ${glory.job} and has ${
+//     glory.hasDriversLicense ? "a" : " no"
+//   } drivers license`;
+// };
 
-console.log(glory.getSummary());
+// console.log(glory.getSummary());
 
-//coding challenge
-const markInfo = {
-  fullName: "Mark Miller",
-  mass: 78,
-  height: 1.69,
-};
-const johnInfo = {
-  fullName: "John Smith",
-  mass: 92,
-  height: 1.95,
-};
-markInfo.CalcBmi = function () {
-  this.bmi = this.mass / this.height ** 2;
-  return this.bmi;
-};
-johnInfo.CalcBmi = function () {
-  this.bmi = this.mass / this.height ** 2;
-  return this.bmi;
-};
-console.log(markInfo.CalcBmi());
-console.log(johnInfo.CalcBmi());
+// //coding challenge
+// const markInfo = {
+//   fullName: "Mark Miller",
+//   mass: 78,
+//   height: 1.69,
+// };
+// const johnInfo = {
+//   fullName: "John Smith",
+//   mass: 92,
+//   height: 1.95,
+// };
+// markInfo.CalcBmi = function () {
+//   this.bmi = this.mass / this.height ** 2;
+//   return this.bmi;
+// };
+// johnInfo.CalcBmi = function () {
+//   this.bmi = this.mass / this.height ** 2;
+//   return this.bmi;
+// };
+// console.log(markInfo.CalcBmi());
+// console.log(johnInfo.CalcBmi());
 
-if (markInfo.bmi > johnInfo.bmi) {
-  console.log(
-    `${markInfo.fullName}'s BMI ${markInfo.bmi} is higher than ${johnInfo.fullName}'s ${johnInfo.bmi}!`
-  );
-} else if (johnInfo.bmi > markInfo.bmi) {
-  console.log(
-    `${johnInfo.fullName}'s BMI ${johnInfo.bmi} is higher than ${markInfo.fullName}'s ${markInfo.bmi}!`
-  );
+// if (markInfo.bmi > johnInfo.bmi) {
+//   console.log(
+//     `${markInfo.fullName}'s BMI ${markInfo.bmi} is higher than ${johnInfo.fullName}'s ${johnInfo.bmi}!`
+//   );
+// } else if (johnInfo.bmi > markInfo.bmi) {
+//   console.log(
+//     `${johnInfo.fullName}'s BMI ${johnInfo.bmi} is higher than ${markInfo.fullName}'s ${markInfo.bmi}!`
+//   );
+// }
+
+// // more array practice
+// const populations = [40, 57, 350, 60];
+// console.log(populations.length === 4);
+// const percentageOfWorld1 = function (population) {
+//   let worldpopln = 7900;
+//   return (population / worldpopln) * 100;
+// };
+// const percentages = [
+//   percentageOfWorld1(populations[0]),
+//   percentageOfWorld1(populations[1]),
+//   percentageOfWorld1(populations[2]),
+//   percentageOfWorld1(populations[3]),
+// ];
+
+// console.log(percentages);
+
+// const neighbours = ["Kenya", "Tanzania", "Rwanda", "South sudan"];
+// neighbours.push("Utopia"); // adds Utopia to the array
+// console.log(neighbours);
+// neighbours.pop("Utopia");
+// console.log(neighbours);
+// if (!neighbours.includes("Germany")) {
+//   console.log(`Probably not a central European country`);
+// }
+// neighbours[neighbours.indexOf("Tanzania")] = "Repbulic of Tanzania";
+// console.log(neighbours);
+
+// const myCountry = {
+//   country: "Uganda",
+//   capital: "Kampala",
+//   language: "English",
+//   population: 40,
+//   neighbours: ["kenya", "Rwanda", "Tanzania", "DR congo"],
+// };
+// console.log(myCountry);
+// console.log(
+//   `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people,${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`
+// );
+// myCountry.population += 2;
+// console.log(myCountry.population);
+// myCountry.describe = function () {
+//   return `${this.country} has ${this.population} million ${this.language}-speaking people,${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`;
+// };
+// // more and more practice
+// console.log(myCountry.describe());
+// myCountry.CheckIsland = function () {
+//   return this.neighbours.length === 0 ? true : false;
+// };
+// console.log(myCountry.CheckIsland());
+
+// for (let i = "glory"; i.length < 20; i += "glory") {
+//   console.log(i);
+// }
+
+// // looping through Arrays
+
+// const friends = ["Brian", "Nelson", "Henry", "Obed", "Kamanzi"];
+// const bestFriendsLetters = [];
+// for (let i = 0; i < friends.length; i++) {
+//   console.log(`${friends[i]} is one of Glory's friends`); //reading/displaying elements of an array
+//   bestFriendsLetters.push(friends[i][0]); //adding elements to an empty array with a for loop.
+// }
+
+// console.log(bestFriendsLetters);
+
+// voters = 50;
+// for (let voter = 1; voter <= 50; voter++)
+//   console.log(`voter number ${voter} is currently voting`);
+
+// const percentageOfWorld1 = function (population) {
+//   let worldpopln = 7900;
+//   return (population / worldpopln) * 100;
+// };
+// const percentage2 = [];
+// const populations = [40, 57, 350, 60];
+// for (let i = 0; i < populations.length; i++) {
+//   const perc = percentageOfWorld1(populations[1]);
+//   percentage2.push(perc);
+// }
+// console.log(percentage2);
+
+// for (let i = populations.length - 1; i >= 0; i--) {
+//   console.log(populations[i]);
+// }
+// for (let exercise = 1; exercise < 4; exercise++) {
+//   console.log(`---starting exercise ${exercise}`);
+//   for (let rep = 1; rep < 6; rep++) {
+//     console.log(`lifting weight reptition ${rep}`);
+//   }
+// }
+
+//WHILE LOOP
+
+let rep = 1;
+while (rep <= 10) {
+  console.log(`Exercise repition ${rep}`);
+  rep++;
 }
 
-// more array practice
-const populations = [40, 57, 350, 60];
-console.log(populations.length === 4);
-const percentageOfWorld1 = function (population) {
-  let worldpopln = 7900;
-  return (population / worldpopln) * 100;
-};
-const percentages = [
-  percentageOfWorld1(populations[0]),
-  percentageOfWorld1(populations[1]),
-  percentageOfWorld1(populations[2]),
-  percentageOfWorld1(populations[3]),
-];
+//Random numbers with a whille loop
 
-console.log(percentages);
+let dice = Math.trunc(Math.random() * 6) + 1; // math.trunc() removes the decimal points
+// console.log(dice);
 
-const neighbours = ["Kenya", "Tanzania", "Rwanda", "South sudan"];
-neighbours.push("Utopia"); // adds Utopia to the array
-console.log(neighbours);
-neighbours.pop("Utopia");
-console.log(neighbours);
-if (!neighbours.includes("Germany")) {
-  console.log(`Probably not a central European country`);
+while (dice !== 6) {
+  console.log(`you rolled ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log(`loop is about to end`);
 }
-neighbours[neighbours.indexOf("Tanzania")] = "Repbulic of Tanzania";
-console.log(neighbours);
-
-const myCountry = {
-  country: "Uganda",
-  capital: "Kampala",
-  language: "English",
-  population: 40,
-  neighbours: ["kenya", "Rwanda", "Tanzania", "DR congo"],
-};
-console.log(myCountry);
-console.log(
-  `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people,${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`
-);
-myCountry.population += 2;
-console.log(myCountry.population);
-myCountry.describe = function () {
-  return `${this.country} has ${this.population} million ${this.language}-speaking people,${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`;
-};
-// more and more practice
-console.log(myCountry.describe());
-myCountry.CheckIsland = function () {
-  return this.neighbours.length === 0 ? true : false;
-};
-console.log(myCountry.CheckIsland());
-
-for (let i = "glory"; i.length < 20; i += "glory") {
-  console.log(i);
-}
-
-// looping through Arrays
-
-const friends = ["Brian", "Nelson", "Henry", "Obed", "Kamanzi"];
-const bestFriendsLetters = [];
-for (let i = 0; i < friends.length; i++) {
-  console.log(`${friends[i]} is one of Glory's friends`); //reading/displaying elements of an array
-  bestFriendsLetters.push(friends[i][0]); //adding elements to an empty array with a for loop.
-}
-
-console.log(bestFriendsLetters);
