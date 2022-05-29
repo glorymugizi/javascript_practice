@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // const entireHeading = document.querySelector("#heading");
 // const childHeading = document.querySelector("#heading article");
@@ -941,19 +941,61 @@ if (numNeighbours === 1) {
 
 //WHILE LOOP
 
-let rep = 1;
-while (rep <= 10) {
-  console.log(`Exercise repition ${rep}`);
-  rep++;
-}
+// let rep = 1;
+// while (rep <= 10) {
+//   console.log(`Exercise repition ${rep}`);
+//   rep++;
+// }
 
 //Random numbers with a whille loop
 
-let dice = Math.trunc(Math.random() * 6) + 1; // math.trunc() removes the decimal points
+// let dice = Math.trunc(Math.random() * 6) + 1; // math.trunc() removes the decimal points
 // console.log(dice);
 
-while (dice !== 6) {
-  console.log(`you rolled ${dice}`);
-  dice = Math.trunc(Math.random() * 6) + 1;
-  if (dice === 6) console.log(`loop is about to end`);
-}
+// while (dice !== 6) {
+//   console.log(`you rolled ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+//   if (dice === 6) console.log(`loop is about to end`);
+// }
+
+// const calcTip = function (bill) {
+//   if (bill >= 50 && bill <= 300) {
+//     return bill * 0.15;
+//   } else return bill * 0.2;
+// };
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const tips = [];
+// const totals = [];
+
+// for (let i = 0; i < bills.length; i++) {
+//   const tip = calcTip(bills[i]);
+//   tips.push(tip);
+//   totals.push(bills[i] + tip);
+// }
+// console.log(tips);
+// console.log(totals);
+
+// const listA = [22, 33, 44, 66, 77];
+// const listB = [11, 22, 55, 66, 88];
+// const listc = [];
+// for (let i = 0; i < listA.length; i++) {
+//   listc.push(listA[i] + listB[i]);
+// }
+
+// console.log(listc);
+
+const temperature = [6, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+
+const calcAmplitude = function (temps) {
+  let max = temps[0];
+  let min = temps[0];
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== 'number') continue;
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+  console.log(max, min);
+  return max - min;
+};
+console.log(calcAmplitude(temperature));
